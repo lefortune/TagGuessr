@@ -1,4 +1,4 @@
-# TagGuesser: Degen Edition
+# TagGuessr: Degen Edition
 
 **TW: anime**
 
