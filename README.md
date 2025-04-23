@@ -6,7 +6,7 @@ An interactive web challenge game involving anime-style images and descriptive t
 
 Imageboard/database sites like Danbooru are popular for their detailed image metadata tagging systems (and certain other reasons), but they can be hard to navigate or appreciate unless you're familiar with how tags work; this game demystifies tagging by turning it into a guessing game. 
 
-Whether or not such nerd folly interests you, this game is a fun knowledge check on your knowledge of media, vocabulary, and real-world objects. Overall, a fun challenge for both casual fans and metadata nerds.
+Whether or not such nerd folly interests you, this game will be a fun test of your observational skills and your knowledge check on media, vocabulary, and real-world objects.
 
 ## Features + Tools: 
 Image Fetching: JavaScript (Fetch API), Danbooru REST API
