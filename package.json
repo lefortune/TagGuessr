@@ -1,0 +1,20 @@
+{
+  "name": "tagguessr",
+  "version": "1.0.0",
+  "description": "**TW: anime**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lefortune/TagGuessr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lefortune/TagGuessr/issues"
+  },
+  "homepage": "https://github.com/lefortune/TagGuessr#readme"
+}
