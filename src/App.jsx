@@ -6,7 +6,7 @@ const DAILY_TAG_CACHE_KEY = 'danbooru-daily-tags';
 const DAILY_IMAGE_CACHE_KEY = 'danbooru-daily-image';
 
 function getTodayKey() {
-  return dayjs().format('YYYY-MM-DD-HH-mm');
+  return dayjs().format('YYYY-MM-DD');
 }
 
 async function fetchDailyPost() {
@@ -21,7 +21,7 @@ async function fetchDailyPost() {
     };
   }
 
-  const res = await fetch(`https://danbooru.donmai.us/posts.json?limit=1&random=true&tags=-filetype:video rating:g ooyun`);
+  const res = await fetch(`https://danbooru.donmai.us/posts.json?limit=1&random=true&tags=-filetype:video score:>10 rating:g`);
   const [post] = await res.json();
   const imageUrl = post.large_file_url;
 
@@ -64,7 +64,7 @@ function App() {
   const [guessedTags, setGuessedTags] = useState([]);
   const [guess, setGuess] = useState('');
   const [score, setScore] = useState(0);
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState('Start guessing!');
   const [helpExpanded, setHelpExpanded] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
@@ -135,9 +135,9 @@ function App() {
     }
     try {
       await navigator.clipboard.writeText(text);
-      setFeedback('Results copied to clipboard!');
+      alert("Copied to clipboard!");
     } catch (err) {
-      setFeedback('Failed to copy.');
+      console.log('Failed to copy.');
     }
   };
 
@@ -153,7 +153,7 @@ function App() {
               <p className="text-xl">Your Score: {score} / 1000</p>
               {score >= 999 && (
                 <p className="mt-2 text-center text-green-600 text-xl font-semibold">
-                  🎉 Perfect! 🎉
+                  🎉 Perfect 🎉
                 </p>
               )}
               <p className="text-xl mt-4">Historical Perfects: 2</p>
@@ -263,7 +263,7 @@ function App() {
                 onClick={() => setHelpExpanded(!helpExpanded)}
                 className="absolute right-2 top-4 text-xs px-2 py-1 border border-[#704fb9] text-[#704fb9] bg-white rounded hover:bg-[#704fb9] hover:text-white transition"
               >
-                {helpExpanded ? "(hide)" : "(show)"}
+                {helpExpanded ? "hide" : "show"}
               </button>
             </div>
             
