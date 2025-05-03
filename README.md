@@ -1,34 +1,12 @@
-# TagGuessr: Degen Edition
+# React + Vite
 
-**TW: anime**
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-An interactive web challenge game involving anime-style images and descriptive tags. Players are shown an image from the Danbooru imageboard and must guess the tags associated with it. The more tags a player gets right, the higher their score. More points are awarded the rarer or more obscure the correct tag is.
+Currently, two official plugins are available:
 
-Imageboard/database sites like Danbooru are popular for their detailed image metadata tagging systems (and certain other reasons), but they can be hard to navigate or appreciate unless you're familiar with how tags work; this game demystifies tagging by turning it into a guessing game. 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Whether or not such nerd folly interests you, this game will be a fun test of your observational skills and your knowledge check on media, vocabulary, and real-world objects.
+## Expanding the ESLint configuration
 
-## Features + Tools: 
-Image Fetching: JavaScript (Fetch API), Danbooru REST API
-
-Tag Submission + Matching: JavaScript (string matching), optional fuzzy logic (e.g. Fuse.js), Danbooru API's tag list
-
-Scoring System: JavaScript
-
-Tag Filtering: JavaScript (blacklist array)
-
-Tutorial + UI: HTML/CSS, React, JavaScript, possibly a simple modal library like Micromodal
-
-Leaderboard / High Score Tracking: React, Database (MongoDB) and subsequent calls
-
-Styling + UX: HTML5, CSS + animations, React
-
-## Timeline:
-
-4/22 Tue: Rough design with Figma
-
-4/24 Thu: Begin backend - making the actual game
-
-4/27 Sun: Begin frontend - cool visuals and transitions
-
-5/1 Thu: Bug fixes and final touches
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
