@@ -153,10 +153,10 @@ function App() {
               <p className="text-xl">Your Score: {score} / 1000</p>
               {score >= 999 && (
                 <p className="mt-2 text-center text-green-600 text-xl font-semibold">
-                  🎉 Perfect 🎉
+                  🎉 Perfect! 🎉
                 </p>
               )}
-              <p className="text-xl mt-4">Historical Perfects: 2</p>
+              <p className="text-xl mt-4">Historical Perfects: 0</p>
             </div>
 
             <p className="text-lg mt-4">
@@ -209,7 +209,9 @@ function App() {
           {/* Score Display */}
           <div className="mt-4">
             <p className="text-6xl font-bold text-[#1e1e1e]">
-              {score}<span className="text-4xl font-normal"> / 1000 Pts</span>
+              {score}<span className="text-4xl font-normal"> 
+                {" / 1000 Pts"}{score === 1000 ? " 🎉" : ""}
+              </span>
             </p>
           </div>
 
